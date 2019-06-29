@@ -14,17 +14,27 @@
       .images-wrapper {
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-between;
+        justify-content: center;
+        align-content: center;
       }
+      
+      .image-to-show[data-show="yes"] {
+      display: block;
+      }
+      
+      .image-to-show[data-show="no"] {
+      display: none;
+      } 
     </style>
-    <script src="script.js"></script>
+    <script defer src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
     <div class="images-wrapper">
-      <img src="./img/1.jpg" alt="image of game" class="image-to-show" />
-      <img src="./img/2.jpg" alt="image of game" class="image-to-show" />
-      <img src="./img/3.JPG" alt="image of game" class="image-to-show" />
-      <img src="./img/4.png" alt="image of game" class="image-to-show" />
+      <img src="./img/1.jpg" data-show="yes" alt="image of game" class="image-to-show" />
+      <img src="./img/2.jpg" data-show="no" alt="image of game" class="image-to-show" />
+      <img src="./img/3.JPG" data-show="no" alt="image of game" class="image-to-show" />
+      <img src="./img/4.png" data-show="no" alt="image of game" class="image-to-show" />
     </div>
   </body>
 </html>
